@@ -1,15 +1,15 @@
 ,Scoring Criteria Weights,,,"// the weights are multiplied with the score returned by the evaluation criteria [0, 1.f]",,,,,
 ,Overall,Potential,Age,Position,Free Agents,Pre Contract,Loan Listed,Transfer Listed,Monitored
-Improve squad,2,0,2,2,0,0,0,0,3
-Next big thing,2,3,2,2,0,0,0,0,3
-Loans,2,0,1,2,0,0,1,0,3
+Improve squad,1.5,0.5,1,1,0.5,0.5,0,0.5,3
+Next big thing,0.8,2,1,1,0,0,0,0.5,3
+Loans,1.5,0,1,1,0,0,2,0,2
 ,,,,,,,,,
 ,Position Penalty,,,,,,,,
 ,Preffered 1,Preffered 2,Preffered 3,Preffered 4,,,,,
 Penalty,0,0,0,1,,// the penalty is substracted from 1.f // [AS] This functionality is commented out untill WPA is changed,,,
 ,,,,,,,,,
 Num Total Picked Players,10,,// The total number of players picked for the shortlist,,,,,,
-Num Shortlisted Players,3,,// The number of random players which actually get picked,,,,,,
+Num Shortlisted Players,5,,// The number of random players which actually get picked,,,,,,
 Big Thing or Loan Overall Threshold,73,,,,,,,,
 Max Age Improve Squad,30,,,,,,,,
 Max Age Next Big Thing,24,,,,,,,,
@@ -19,7 +19,7 @@ Improve Squad Overall Min Threshold,1.03,,// relative weakest area average ,,,,,
 Improve Squad Overall Max Threshold,1.05,,,,,,,,
 ,,,,,,,,,
 Improve Squad Bias Overall,70,80,100,,// Overall values lower than this value get the respective bias,,,,
-Improve Squad Bias Value,0,0,0,,// This value is added to the improve squad overall max threshold,,,,
+Improve Squad Bias Value,0,0.03,0.06,,// This value is added to the improve squad overall max threshold,,,,
 ,,,,,,,,,
 Loan Overall Min Threshold,0.50,,// relative weakest area average ,,,,,,
 Loan Overall Max Threshold,1,,,,,,,,
