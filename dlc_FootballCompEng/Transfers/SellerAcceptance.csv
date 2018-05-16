@@ -1,0 +1,10 @@
+Offer/Demand %,Seller Accept,Seller Counter Offer,Seller Reject
+150,100,0,0
+130,95,5,0
+120,95,5,0
+110,90,10,0
+100,80,20,0
+90,20,80,0
+80,0,100,0
+60,0,50,50
+30,0,0,100

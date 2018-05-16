@@ -411,22 +411,29 @@ function GetSuitableTeamsForPlayer( teamId, playerId, numOffers, ignoreBudget )
 end
 
 function FindSuitablePlayersSafety( playerId, numOffers )
-	local highTeam = Tuning.MISC.highTeamIds    
-	local numHighTeams = table.getn( highTeam )
-	local userTeam = Engine.GetUserTeam()
+	local offer = { -1, -1, -1 }
+	local actualOffers = 0
+	local teamId = Engine.GetUserTeam()
 	if( numOffers == nil ) then
 		numOffers = 3
 	end
-	for teamCount = 1, numHighTeams do
-		local isRival = Engine.AreTeamsRivals( userTeam, highTeam[ teamCount ] )
-		if( userTeam == highTeam[ teamCount ] or isRival == true ) then
-			table.remove( highTeam, teamCount )
-			numHighTeams = table.getn( highTeam )
-			break
+	if( numOffers <= 3 ) then
+		local badOfferFound = false
+		actualOffers, offer[ 1 ], offer[ 2 ], offer[ 3 ] = Engine.FindSuitableTeamsForPlayer( teamId, playerId, numOffers, false )
+		for offerCount = 1, actualOffers do
+			local isRival = Engine.AreTeamsRivals( teamId, offer[ offerCount ] )
+			if( offer[ offerCount ] == -1 or isRival == true ) then
+				badOfferFound = true
+				break
+			end
 		end
+		if( badOfferFound == true ) then
+			Engine.LuaAssert( "FindSuitablePlayersSafety - Invalid offer requested: " .. numOffers )
+		end
+	else
+		Engine.LuaAssert( "FindSuitablePlayers - Too many offers requested: " .. numOffers )
 	end
-	randNum = Engine.GetRandomNumber( 1, numHighTeams - numOffers )
-	return highTeam[ randNum ], highTeam[ randNum + 1 ], highTeam[ randNum + 2 ]
+	return actualOffers, offer[ 1 ], offer[ 2 ], offer[ 3 ]
 end
 
 function DidPlayerScore( matchResult, player ) -- Also in misc functions
