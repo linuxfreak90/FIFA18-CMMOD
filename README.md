@@ -10,6 +10,9 @@ NOTE: You need to use the Mod Manager every time when playing the game!
 
 Groups of the CL/EL should look [like this](https://imgur.com/a/swkaa).
 
+### FIFA18-GPMOD
+Use [FIFA18-GPMOD](https://github.com/linuxfreak90/FIFA18-GPMOD/releases) to increase CPUAI difficulty in game.
+
 ## Features & improvements
 - Use Champions League and Europa League group tables (using replacements for teams not included in the game)
 - More teams should be active and search for replacements on the transfermarket
@@ -21,7 +24,7 @@ Groups of the CL/EL should look [like this](https://imgur.com/a/swkaa).
 - Teams should play with a better line-up, change line-up a bit more
 - Higher chances of job manager offer(s)
 - Sim. results should be a bit more realistic
-- Higher chance of release clauses in some leagues (La Liga)
+- Higher chance of release clauses in some leagues (La Liga, La Liga 1|2|3)
 - Realistic club budgets
 - Remove CPUAI cheating
 - ..
