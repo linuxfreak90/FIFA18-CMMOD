@@ -34,4 +34,4 @@ Use [FIFA18-GPMOD](https://github.com/linuxfreak90/FIFA18-GPMOD/releases) to inc
 - Checkout training
 - Try to improve loan deals
 
-With many thanks for the modding community for all your fantastic work!
+With many thanks to the modding community for all your fantastic work!
