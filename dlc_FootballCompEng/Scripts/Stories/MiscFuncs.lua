@@ -69,7 +69,8 @@ end
 
 function MakeCPUOfferForPlayer( teamId, playerId, numOffers, startRandom )
 	local inWindow = Engine.IsWithinTransferWindow()
-	if( inWindow == true ) then
+	local wouldEvenLeaveClub = WouldPlayerEvenLeaveClub( teamId, playerId )
+	if( inWindow == true and WouldPlayerEvenLeaveClub == true ) then
 		local maxOffers = 5
 		if( numOffers > maxOffers ) then
 			numOffers = maxOffers
@@ -126,7 +127,8 @@ function IsTooBigForTeam( teamId, playerId )
 	local tooBig = false
 	teamId = Engine.StackRankTeamByOverall( teamId )
 	local playerRank = Engine.GetPlayerIndexById( teamId, playerId )
-	if( playerRank == 1 ) then -- top play
+	local wouldEvenLeaveClub = WouldPlayerEvenLeaveClub( teamId, playerId )
+	if( playerRank == 1 and wouldEvenLeaveClub == true ) then -- top play
 		local playerOverall = Engine.GetPlayerOverall( playerId )
 		local secondBestPlayer = Engine.GetPlayer( teamId, 2 )
 		local secondBestOverall = Engine.GetPlayerOverall( secondBestPlayer )
@@ -134,7 +136,7 @@ function IsTooBigForTeam( teamId, playerId )
 		if( playerOverall >= secondBestOverall + overallDiff ) then
 			tooBig = true
 		end
-	elseif( playerRank <= Tuning.MISC.topPlayerCount ) then -- top five player
+	elseif( playerRank <= Tuning.MISC.topPlayerCount and wouldEvenLeaveClub == true ) then -- top five player
 		local potentialDiff = Tuning.MISC.potDiff_TopPlayers
 		local playerOverall = Engine.GetPlayerOverall( playerId )
 		local playerPotential = Engine.GetPlayerPotential( teamId, playerId )
@@ -422,7 +424,8 @@ function FindSuitablePlayersSafety( playerId, numOffers )
 		actualOffers, offer[ 1 ], offer[ 2 ], offer[ 3 ] = Engine.FindSuitableTeamsForPlayer( teamId, playerId, numOffers, false )
 		for offerCount = 1, actualOffers do
 			local isRival = Engine.AreTeamsRivals( teamId, offer[ offerCount ] )
-			if( offer[ offerCount ] == -1 or isRival == true ) then
+			local wouldEvenLeaveClub = WouldPlayerEvenLeaveClub( teamId, playerId )
+			if( offer[ offerCount ] == -1 or isRival == true or wouldEvenLeaveClub == false ) then
 				badOfferFound = true
 				break
 			end

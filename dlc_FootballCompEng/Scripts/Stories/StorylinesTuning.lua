@@ -260,21 +260,21 @@ Tuning = (function()
 -- LOAN LISTED
 -------------------------------------------------------------------------------------------------------------------------------
 	local LOANLIST = {
-		storyCoolDown = 5, -- Number of days before the same story can be triggered.
+		storyCoolDown = 1, -- Number of days before the same story can be triggered.
 		-- Morale
-		numPlayersToAvg = 18, -- Number of players used to average the team
-		und20_AbvAvg_Unhappy_Morale = -40, -- under 20, above team average, low playtime morale ( -10 )
-		und20_AbvAvg_Happy_Morale = -40, -- under 20, above team average, high playtime morale ( -20 )
-		und20_BlwAvg_Unhappy_Morale = 10, -- under 20, below team average, low playtime morale ( 10 )
-		und20_BlwAvg_Happy_Morale = 10, -- under 20, below team average, high playtime morale ( -10 )
+		numPlayersToAvg = 17, -- Number of players used to average the team
+		und20_AbvAvg_Unhappy_Morale = -10, -- under 20, above team average, low playtime morale ( -10 )
+		und20_AbvAvg_Happy_Morale = -20, -- under 20, above team average, high playtime morale ( -20 )
+		und20_BlwAvg_Unhappy_Morale = 50, -- under 20, below team average, low playtime morale ( 10 )
+		und20_BlwAvg_Happy_Morale = 25, -- under 20, below team average, high playtime morale ( -10 )
 		ovr20_AbvAvg_Unhappy_Morale = -30, -- over 20, above team average, low playtime morale ( -10 )
 		ovr20_AbvAvg_Happy_Morale = -30,  -- over 20, above team average, High playtime morale ( -30 )
-		ovr20_BlwAvg_Unhappy_Morale = 10, -- over 20, below team average, low playtime morale ( 15 )
-		ovr20_BlwAvg_Happy_Morale = -10, -- over 20, below team average, High playtime morale ( -20 )
-		ovr30_AbvAvg_Unhappy_Morale = -40, -- over 30, above team average, low playtime morale ( -20 )
+		ovr20_BlwAvg_Unhappy_Morale = 15, -- over 20, below team average, low playtime morale ( 15 )
+		ovr20_BlwAvg_Happy_Morale = -20, -- over 20, below team average, High playtime morale ( -20 )
+		ovr30_AbvAvg_Unhappy_Morale = -25, -- over 30, above team average, low playtime morale ( -20 )
 		ovr30_AbvAvg_Happy_Morale = -40, -- over 30, above team average, high playtime morale ( -40 )
-		ovr30_BlwAvg_Unhappy_Morale = 10, -- over 30, below team average, low playtime morale ( 15 )
-		ovr30_BlwAvg_Happy_Morale = -20 -- over 30, below team average, high playtime morale ( -10 )
+		ovr30_BlwAvg_Unhappy_Morale = 15, -- over 30, below team average, low playtime morale ( 15 )
+		ovr30_BlwAvg_Happy_Morale = -25 -- over 30, below team average, high playtime morale ( -10 )
 	}
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -282,7 +282,7 @@ Tuning = (function()
 -------------------------------------------------------------------------------------------------------------------------------
 	local ONBENCH = {
 		numDays = 0, -- Number of days before next match the player will ask to be played ( 0 )
-		storyCoolDown = 60, -- Number of days before the same story can be triggered.
+		storyCoolDown = 15, -- Number of days before the same story can be triggered.
 		streakContinues_Morale = 15, -- Morale if his streak continues ( 15 )
 		notPlayed_Morale = -10 -- Morle drop if he is not allowed to play ( -10 )
 	}
@@ -335,7 +335,7 @@ Tuning = (function()
 -------------------------------------------------------------------------------------------------------------------------------
 	local STUPID = {
 		overallDiff = 15, -- Ovr Difference between rediculous player and user team avg ( 15 )
-		numPlayersToAvg = 17, -- Number of players average ( 17 )
+		numPlayersToAvg = 20, -- Number of players average ( 20 )
 		boardConfidencePen_1st = -10, -- Penalty after the second stupid offer ( -10 )
 		boardConfidencePen_2nd = -10 -- Penalty after the third stupid offer ( -10 )
 	}
@@ -346,7 +346,7 @@ Tuning = (function()
 	local PRESS = {
 		bottomPerc = 15, -- Considered the bottom team ( 15 )
 		topPerc = 15, -- Considered top percent ( 15 )
-		superStarOvr = 87, -- OVR required for a player to be considered a super star
+		superStarOvr = 84, -- OVR required for a player to be considered a super star
 		evenDiff = 4, -- max OVR difference to be considered equal ( 4 )
 		better = 9, -- Max Differnce to be considered slightly better ( 9 )
 		sigBetter = 109, -- max for a user to be consdered signifigantly better ( 109? )
@@ -378,14 +378,14 @@ Tuning = (function()
 -- TRANSFER LISTED
 -------------------------------------------------------------------------------------------------------------------------------
 	local LISTED = {
-		numPlayersToAvg = 18, -- Numbver of players on the team to average, highest to lowest ( 18 )
-		und20_AbvAvg_Morale = -30, -- Under 20, above average Morale Penalty ( -20 )
-		und20_BlwAvg_Morale = -20, -- Under 20, below average Morale Penalty ( -10 )
+		numPlayersToAvg = 20, -- Number of players on the team to average, highest to lowest ( 18 )
+		und20_AbvAvg_Morale = -50, -- Under 20, above average Morale Penalty ( -20 )
+		und20_BlwAvg_Morale = -40, -- Under 20, below average Morale Penalty ( -10 )
 		ovr20_AbvAvg_Morale = -30, -- Over 20, above average Morale Penalty ( -20 )
-		ovr20_BlwAvg_Morale = -10, -- Over 20, below average Morale Penalty ( -10 )
+		ovr20_BlwAvg_Morale = 10, -- Over 20, below average Morale Penalty ( -10 )
 		ovr30_AbvAvg_Morale = -30, -- Over 30, above average Morale Penalty ( -20 )
-		ovr30_BlwAvg_Morale = -10, -- Over 30, below average Morale Penalty ( -10 )
-		storyCoolDown = 5, -- Number of days before the same story can be triggered.
+		ovr30_BlwAvg_Morale = 15, -- Over 30, below average Morale Penalty ( -10 )
+		storyCoolDown = 1, -- Number of days before the same story can be triggered.
 		storyPriority = 2,
 		maxYoungPlayerAge = 21,
 		minOldPlayerAge = 30
@@ -397,7 +397,7 @@ Tuning = (function()
 	local TRANSFERS = {
 		numStories = 5, -- Max number of new signing stories ( 5 )
 		ovrDiff = 20, -- OVR difference needed to consider a player a massive signing ( 20 )
-		storyCoolDown = 21, -- Number of days before the same story can be triggered.
+		storyCoolDown = 3, -- Number of days before the same story can be triggered.
 		exceptionSellingTeamId = 111592
 	}
 
@@ -468,7 +468,7 @@ Tuning = (function()
 	local NEWSIGNING = {
 		newSigningProgressDelay = 60, -- Number of days the follow up article appears after signing a new player. ( 60 )
 		formRating = 59, -- Anything above this number is considered good form. (59)
-		newSigningCooldown = 21, -- Min days before the story can be reactivated (21)
+		newSigningCooldown = 3, -- Min days before the story can be reactivated (21)
 		minPlayerOvr = 50,
 		percentageThroughSeason = 60,
 		chancePercentage = 25,
@@ -486,7 +486,7 @@ Tuning = (function()
 		topTierPlayer = 2, -- Min level to be considered a top player (3)
 		clubProgressDelay = 90, -- Day delay until the club's progress is reported on. (90)
 		playerProgressDelay = 60, -- Day delay until the lost player's progress is reported on. (90)
-		lostPlayerCoolDown = 21, -- Days before the story can be activated again. (21)
+		lostPlayerCoolDown = 3, -- Days before the story can be activated again. (21)
 		summaryNewsPriority = 10,
 		progressNewsPriority = 2,
 		monthsJoinedThreshold = 4,
@@ -495,12 +495,12 @@ Tuning = (function()
 		minMonthsJoined = 6, -- Min amount of months a player must have been on the team before requesting to replace the lost player. (6)
 		maxPlayerAge = 30, -- Maximum player age of a player that would make the request. (30)
 		replacementMinDiff = 0, -- Minimum OVR difference between the player who could consider himself a worthy replacement (0)
-		replacementMaxDiff = 15, -- Max OVR difference between the player who could consider himself a worthy replacement (15)
-		chanceOfSecondBest = 50, -- Chnace the second best player will make the request instead of the next best. (50)
+		replacementMaxDiff = 5, -- Max OVR difference between the player who could consider himself a worthy replacement (15)
+		chanceOfSecondBest = 50, -- Chance the second best player will make the request instead of the next best. (50)
 		replacementPlayerDelay = 2, -- Number of days after the player is lost the new player will make the request (2)
 		replacementProgDelayLow = 60, -- Min delay until the players progress is reported(60)
 		replacementProgDelayHigh = 90, -- Delay until the players progress is reported(90)
-		replacementPlayerCoolDown = 21 -- Cool down before the player replaced story can be re-activated (21)
+		replacementPlayerCoolDown = 3 -- Cool down before the player replaced story can be re-activated (21)
 	}
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -514,9 +514,9 @@ Tuning = (function()
 		oldPlayerMinTier = 2, -- Only this tier and better will be selected for the story. (2)
 		newUnderOldPlayerDiff = 3, -- Max differential between players if the old player has greater OVR than the new one. (5)
 		newOverOldPlayerDiff = 10, -- Max differential between players if the old player has lesser OVR than the new one. (10)
-		pfrCooldown = 21, -- Days needed before the story could trigger after ending. (21)
+		pfrCooldown = 3, -- Days needed before the story could trigger after ending. (21)
 		pfrStartDelay = 2, -- Days after the new signing the first news article will appear. (2)
-		minMatchImportanceStage2 = 85, -- Minimium match Importance for the player to consider himself left out of an important match. (85)
+		minMatchImportanceStage2 = 85, -- Minimum match Importance for the player to consider himself left out of an important match. (85)
 		newPlayerGoodRating = 60, -- Above this rating is considered a good match for the new signing which results in a news article. (60)
 		pfrPlayerDecisionDelay = 30, -- Number of days after the player has said he is upset that you have to increase his morale before a transfer request. (30)
 		minPercentageThroughSeason = 30,
@@ -571,7 +571,7 @@ Tuning = (function()
 -- COUNTER OFFER
 -------------------------------------------------------------------------------------------------------------------------------
 	local NEGOTIATE = {
-		negotiateCooldown = 21, -- Number of days before the negotiation story can re-trigger.
+		negotiateCooldown = 1, -- Number of days before the negotiation story can re-trigger.
 		newsWeight = 1,
 		maxCounterOfferPlayerTier = 3
 	}
@@ -696,7 +696,7 @@ Tuning = (function()
 -- NEW JOB
 -------------------------------------------------------------------------------------------------------------------------------
 	local NEWJOB = {
-		storyCooldown = 21,
+		storyCooldown = 15,
 		storyCooldownInt = 10000,
 		percThroughSeason_News_OldTeam = 30,
 		domPrestigeWeight = 0.75,
@@ -708,7 +708,7 @@ Tuning = (function()
 -------------------------------------------------------------------------------------------------------------------------------
 	local NEWS = {
 		playerTier = 3, -- Less than this teir will be considered a star for that team by the press ( 3 )
-		teamOvr = 80, -- Required team Ovr to make the headlines, applies to players as well ( 80 )
+		teamOvr = 75, -- Required team Ovr to make the headlines, applies to players as well ( 80 )
 		previewWeight = 17,
 		reviewWeight = 1,
 		maxPreviewBuildLength = 2600,
@@ -739,11 +739,11 @@ Tuning = (function()
 	local MISC = {
 		-- Too Big For Team
 		ovrDiff_BestPlayer = 2, -- Min difference from the top player to the second best player to consider himself too big ( 2 )
-		topPlayerCount = 5, -- Number of players organized in decending Overall ratings considered "Top Players"( Other than the 1st ranked player ) ( 5 )
+		topPlayerCount = 5, -- Number of players organized in descending Overall ratings considered "Top Players"( Other than the 1st ranked player ) ( 5 )
 		potDiff_TopPlayers = 5,  -- Min difference in potential from a top five player to the best player to consider himself too big ( 5 )
 		-- UnderPaid
 		rankDifference = 3,  -- Min difference from a top five player to the best player to consider himself underpaid ( 3 )
-		maxAge = 30, -- Less than or equal to this will allow a player to feel underpaid ( 30 )
+		maxAge = 29, -- Less than or equal to this will allow a player to feel underpaid ( 30 )
 		--Offer Contract
 		contPerc = 25, -- % Required wage Increase to resign after asking for a transfer ( 25 )
 		-- Would Player Leave

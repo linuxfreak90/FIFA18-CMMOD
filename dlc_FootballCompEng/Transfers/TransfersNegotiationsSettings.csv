@@ -5,7 +5,7 @@ AdjustBuyerMaxOfferIfBudgetIsNotEnough by(%),-10
 SellerMin adjust by Other Offers (%),-10
 Buyer Top Up If Other Better Offers (%),5
 Stall Increase For Other Negotiations(%),10
-Loan Club Min Accepted Scores Sum,50
-Min Loan Or Buy Threshold,150
+Loan Club Min Accepted Scores Sum,150
+Min Loan Or Buy Threshold,100
 ,
 note: do not change the cells arrangement!,
