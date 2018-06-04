@@ -1,8 +1,8 @@
 ,Scoring Criteria Weights,,,"// the weights are multiplied with the score returned by the evaluation criteria [0, 1.f]",,,,,
 ,Overall,Potential,Age,Position,Free Agents,Pre Contract,Loan Listed,Transfer Listed,Monitored
-Improve squad,1.5,0.5,1,1,0.5,0.5,0,0.5,3
-Next big thing,0.8,2,1,1,0,0,0,0.5,3
-Loans,1.5,0,1,1,0,0,2,0,2
+Improve squad,1.5,0.5,1,1,0,0,0,0,3
+Next big thing,1,2,1,1,0,0,0,0.5,3
+Loans,1.5,0,1,1,0,0,1,0,2
 ,,,,,,,,,
 ,Position Penalty,,,,,,,,
 ,Preffered 1,Preffered 2,Preffered 3,Preffered 4,,,,,
