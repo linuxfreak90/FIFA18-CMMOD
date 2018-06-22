@@ -1,10 +1,8 @@
 # FIFA18-CMMOD
 
-Thanks to the great work of - GalaxyMan2015 and benji - we're able to start modding FIFA 18 again. :)
+Thanks to the great work of - shawminator, GalaxyMan2015 and benji - we're able to start modding FIFA 18 again. :)
 
 ## Requirements
-NOTE: You need to use the Mod Manager every time when playing the game!
-
 1. Latest release of [FIFA18-CMMOD](https://github.com/linuxfreak90/FIFA18-CMMOD/releases)
 2. Latest release of [CG File Explorer 18](http://3dgamedevblog.com/wordpress/?sdm_downloads=fifa-18-cgfileexplorer)
 
@@ -30,8 +28,7 @@ Use [FIFA18-GPMOD](https://github.com/linuxfreak90/FIFA18-GPMOD/releases) to inc
 - ..
 
 ## TODO
-- Player growth
-- Checkout training
-- Try to improve loan deals
+- Player growth changes
+- Tweak training
 
-With many thanks to the modding community for all your fantastic work!
+Many thanks to the modding community for all your fantastic work!
